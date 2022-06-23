@@ -14,10 +14,8 @@ const (
 
 func main() {
 	var app = &cli.App{
-		Usage: "\b\b ",
-		Commands: []*cli.Command{
-			&cmd.Init,
-		},
+		Usage:    "\b\b ",
+		Commands: cmd.Commands,
 	}
 
 	err := app.Run(os.Args)

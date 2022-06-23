@@ -13,5 +13,9 @@ var Init = cli.Command{
 }
 
 func initAction(c *cli.Context) (err error) {
-	return initialization.Init(c.Args().First())
+	return initialization.Exec(c.Args().First())
+}
+
+func init() {
+	Commands = append(Commands, &Init)
 }
